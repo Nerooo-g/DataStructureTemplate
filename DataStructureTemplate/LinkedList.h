@@ -2,6 +2,7 @@
 #include<stdexcept>
 #include<iostream>
 
+//This is a linkedlist based on sequence order.
 
 template<class T>
 class LinkedList {
