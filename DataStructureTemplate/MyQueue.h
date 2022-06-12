@@ -10,7 +10,7 @@ private:
 	T* arr_;
 public:
 	MyQueue();
-	MyQueue(int maxsize);
+	MyQueue(const int& maxsize);
 	void push(const T& element);
 	T pop();
 	bool is_empty();
@@ -27,9 +27,10 @@ inline MyQueue<T>::MyQueue()
 }
 
 template<class T>
-inline MyQueue<T>::MyQueue(int maxsize)
+inline MyQueue<T>::MyQueue(const int& maxsize)
 {
-	maxsize_ = ++maxsize;
+	maxsize_ = maxsize;
+	++maxsize_;
 	arr_ = new T[maxsize_];
 	front_ = rear_ = 0;
 }
