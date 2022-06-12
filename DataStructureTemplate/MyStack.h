@@ -9,7 +9,7 @@ private:
 	int top;
 public:
 	MyStack();
-	MyStack(int maxsize);
+	MyStack(const int& maxsize);
 	void push(const T& element);
 	T pop();
 	T get_top();
@@ -27,7 +27,7 @@ inline MyStack<T>::MyStack()
 }
 
 template<class T>
-inline MyStack<T>::MyStack(int maxsize)
+inline MyStack<T>::MyStack(const int& maxsize)
 {
 	maxsize_ = maxsize;
 	arr_ = new T[maxsize];
