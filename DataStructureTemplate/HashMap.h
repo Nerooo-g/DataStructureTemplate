@@ -1,7 +1,6 @@
 #pragma once
 #include<string>
 #include<stdexcept>
-#include<iostream>
 using namespace std;
 
 template<class T1,class T2>
