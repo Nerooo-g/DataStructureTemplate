@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+#include<iostream>
 #include<stdexcept>
 using namespace std;
 
@@ -38,6 +39,7 @@ public:
 	bool search(const T1& key);
 	void remove(const T1& key);
 	~HashMap();
+	void test();
 };
 
 template<class T1, class T2>
@@ -131,7 +133,7 @@ template<class T1, class T2>
 inline bool HashMap<T1, T2>::search(const T1& key)
 {
 	int n = hashcode(key) % size_;
-	if (*(arr_[n].key) == key) return true;
+	if (arr_[n].key && *(arr_[n].key) == key) return true;
 	hasharray* p = &arr_[n];
 	while (p->next != nullptr) {
 		p = p->next;
@@ -178,4 +180,18 @@ inline HashMap<T1, T2>::~HashMap()
 		}
 	}
 	delete[] arr_;
+}
+
+template<class T1, class T2>
+inline void HashMap<T1, T2>::test()
+{
+	for (int i = 0; i < size_; i++) {
+		hasharray* p = &arr_[i];
+		while (p != nullptr) {
+			hasharray* q = p->next;
+			if (p->key) cout << *(p->key)<<" ";
+			p = q;
+		}
+		cout << endl;
+	}
 }
