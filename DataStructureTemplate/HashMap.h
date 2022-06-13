@@ -39,7 +39,7 @@ public:
 	bool search(const T1& key);
 	void remove(const T1& key);
 	~HashMap();
-	void test();
+	void display();
 };
 
 template<class T1, class T2>
@@ -183,7 +183,7 @@ inline HashMap<T1, T2>::~HashMap()
 }
 
 template<class T1, class T2>
-inline void HashMap<T1, T2>::test()
+inline void HashMap<T1, T2>::display()
 {
 	for (int i = 0; i < size_; i++) {
 		hasharray* p = &arr_[i];
