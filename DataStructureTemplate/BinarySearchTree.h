@@ -16,7 +16,6 @@ private:
 	void transplant(Node* ori, Node* suc);
 	Node* s_delete(Node* p);
 public:
-	void create();
 	BST(const T& data);
 	Node* search(const T& data);
 	void insert(const T& data);
@@ -58,14 +57,6 @@ inline BST<T>::Node* BST<T>::s_delete(Node *p)
 
 
 
-template<class T>
-inline void BST<T>::create()
-{
-	T data;
-	while (cin >> data) {
-		insert(data);
-	}
-}
 
 template<class T>
 inline BST<T>::BST(const T& data)

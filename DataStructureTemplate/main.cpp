@@ -45,24 +45,38 @@ void dic(HashMap<string, int>& map,const string& path) {
     }
 }
 
+
+void create(BST<int>* t) {
+    /*int n = 5;
+    for (n; n < 10; n++) {
+        t->insert(n);
+    }*/
+    int n=0;
+    while (cin >> n) {
+        t->insert(n);
+    }
+}
 /*int main() {
     BST<int>* t=new BST<int>(15);
-    /*t->insert(6);
-    t->insert(18);
-    t->insert(3);
-    t->insert(7);
-    t->insert(17);
-    t->insert(20);
-    t->insert(2);
-    t->insert(4);
-    t->insert(13);
-    t->insert(9);
-    t->remove(13);
-    t->create();
+    //t->insert(6);
+    //t->insert(18);
+    //t->insert(3);
+    //t->insert(7);
+    //t->insert(17);
+    //t->insert(20);
+    //t->insert(2);
+    //t->insert(4);
+    //t->insert(13);
+    //t->insert(9);
+    //t->remove(13);
+    create(t);
     delete t;
     cin.get();
 }*/
 
 int main() {
-    cout << endl;
+    int n;
+    while (cin >> n) {
+        cout << n << endl;
+    }
 }
