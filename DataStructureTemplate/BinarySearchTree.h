@@ -19,7 +19,6 @@ public:
 	BST(const T& data);
 	Node* search(const T& data);
 	void insert(const T& data);
-	void preorder(bool flag,Node* node = nullptr);
 	void remove(const T& data);
 	~BST();
 };
@@ -100,16 +99,6 @@ inline void BST<T>::insert(const T& data)
 			else p = p->left;
 		}
 	}
-}
-
-template<class T>
-inline void BST<T>::preorder(bool flag, Node* node)
-{
-	if (flag) node = root_;
-	if (!node) return;
-	std::cout << node->data << std::endl;
-	preorder(false, node->left);
-	preorder(false, node->right);
 }
 
 template<class T>
